@@ -1,0 +1,60 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Obtener Miniatura</title>
+</head>
+<style>
+	.container
+	{
+		width:min-content;
+		margin: auto;
+	}
+
+	#url
+	{
+		padding:8px;
+		border-radius:5px;
+		text-align:center;
+	}
+
+	#btn
+	{
+		padding:7px;
+		font-weight: bold;
+		border-radius:5px;
+		cursor:pointer;
+		margin-top:10px;
+		color:white;
+		background: dodgerblue;
+	}
+
+	img {
+		display:block;
+		margin:auto;
+	}
+</style>
+<body>
+	<div class="container">
+		<input type="text" id="url" placeholder="Ingresa la Url: ">
+		<input type="button" id="btn" value="Buscar Miniatura"><br><br>
+	</div>
+	<script>
+		let btn = document.getElementById("btn");
+
+		/*http://img.youtube.com/vi/IDENTIFICADOR_DEL_VIDEO/0.jpg*/
+		
+
+		const getThumbnail = ()=>
+		{
+			let url = document.getElementById("url").value;
+			let signoIgual = url.indexOf("=");
+			let id = url.substring(signoIgual+1);
+			let img = document.createElement("img");
+			img.src = "http://img.youtube.com/vi/"+id+"/0.jpg";
+			document.body.appendChild(img);
+		}
+
+		btn.addEventListener("click",getThumbnail);
+	</script>
+</body>
+</html>
