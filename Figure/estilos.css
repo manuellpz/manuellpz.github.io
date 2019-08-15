@@ -1,0 +1,12 @@
+body
+{
+	background:khaki;
+}
+
+.square
+{
+	width:130px;
+	height:130px;
+	border:1.5px solid purple;
+	position:absolute;
+}
