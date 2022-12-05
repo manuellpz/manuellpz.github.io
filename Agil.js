@@ -1,12 +1,11 @@
 /*OBTENER ELEMENTOS DEL DOM*/
 
-const getById = id => document.getElementById(id);
-
-const getByClass = className => document.getElementsByClassName(className);
-
-const getByName = elementName => document.getElementsByName(elementName);
-
-const getByTag = tagName => document.getElementsByTagName(tagName);
+const select = element => {
+	return document.querySelector(element);
+}
+const selectAll = elements {
+	return document.querySelectorAll(elements);
+}
 
 /* AGREGAR ESTILOS A ELEMENTO DEL DOM */
 
