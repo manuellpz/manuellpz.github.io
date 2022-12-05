@@ -3,7 +3,7 @@
 const select = element => {
 	return document.querySelector(element);
 }
-const selectAll = elements {
+const selectAll = elements => {
 	return document.querySelectorAll(elements);
 }
 
