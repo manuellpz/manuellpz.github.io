@@ -18,8 +18,7 @@ const setStyles = (element, styles) => {
 }
 
 /* CONVERTIR DECIMAL A ROMANO */
-Number.prototype.toRoman = function () {
-	let number = this;
+const toRoman = (number) => {
 	let arrNum = number
 		.toString()
 		.split('')
