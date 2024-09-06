@@ -68,3 +68,28 @@ const toRoman = (number) => {
 
   return result;
 };
+
+//Obtener un array con posiciones intercambiadas apartir del argumento
+const getRandom = (array) => {
+	//Saber si es un arreglo de numeros o una cadena
+  let isWord = typeof array === 'string';
+	//En caso de que sea cadena la convertimos en un array, caso contrario se conserva el valor
+  array = isWord ? array.split('') : array;
+
+  let positions = [];
+  let aux;
+
+  //Creamos posiciones aleatorias
+  for (let i = 0; i < array.length; i++) {
+    let rand = Math.floor(Math.random() * array.length);
+    positions.push(rand);
+  }
+  //Intercambiamos la posicion actual por la posicion del array de posiciones
+  for (let i = 0; i < array.length; i++) {
+    aux = array[i];
+    array[i] = array[positions[i]];
+    array[positions[i]] = aux;
+  }
+  //En caso que el parametro haya sido cadena retornamos el array como cadena, caso contrario devolvemos el valor normal
+  return isWord ? array.join('') : array;
+};
